@@ -1,0 +1,144 @@
+/* ZenView - Elegant Theater Mode */
+
+/* Hide page scrollbar and set black background */
+body.youtube-zenview-extension {
+  overflow: hidden !important;
+  background: #000 !important;
+}
+
+/* Hide the top navigation bar */
+body.youtube-zenview-extension #masthead-container {
+  display: none !important;
+}
+
+/* Hide sidebar/recommendations */
+body.youtube-zenview-extension #secondary {
+  display: none !important;
+}
+
+/* Hide everything below the video */
+body.youtube-zenview-extension #below {
+  display: none !important;
+}
+
+/* Hide related/meta content */
+body.youtube-zenview-extension #meta,
+body.youtube-zenview-extension #comments,
+body.youtube-zenview-extension #related,
+body.youtube-zenview-extension #merch-shelf,
+body.youtube-zenview-extension #sponsor-button,
+body.youtube-zenview-extension ytd-player-legacy-desktop-watch-ads-renderer {
+  display: none !important;
+}
+
+/* Hide YouTube overlay elements */
+body.youtube-zenview-extension .ytp-chrome-top,
+body.youtube-zenview-extension .ytp-show-cards-title,
+body.youtube-zenview-extension .ytp-cards-teaser,
+body.youtube-zenview-extension .ytp-ce-element {
+  display: none !important;
+}
+
+/* Set all parent containers to black and full viewport */
+body.youtube-zenview-extension #page-manager,
+body.youtube-zenview-extension ytd-page-manager,
+body.youtube-zenview-extension ytd-watch-flexy,
+body.youtube-zenview-extension #content,
+body.youtube-zenview-extension #columns,
+body.youtube-zenview-extension #primary,
+body.youtube-zenview-extension #primary-inner {
+  background: #000 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  max-width: none !important;
+  width: 100% !important;
+}
+
+/* The main player container - fixed to viewport */
+body.youtube-zenview-extension #player-container-outer,
+body.youtube-zenview-extension #player-container,
+body.youtube-zenview-extension #ytd-player {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  max-width: none !important;
+  max-height: none !important;
+  z-index: 9999 !important;
+  background: #000 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* The actual YouTube player element */
+body.youtube-zenview-extension #movie_player,
+body.youtube-zenview-extension .html5-video-player {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  max-height: none !important;
+  background: #000 !important;
+}
+
+/* The video container inside the player */
+body.youtube-zenview-extension .html5-video-container {
+  width: 100% !important;
+  height: 100% !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  overflow: hidden !important;
+  background: #000 !important;
+}
+
+/* The actual video element - this is the key fix */
+body.youtube-zenview-extension video.html5-main-video,
+body.youtube-zenview-extension .html5-video-container video {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  max-height: none !important;
+  min-width: 100% !important;
+  min-height: 100% !important;
+  object-fit: contain !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  transform: none !important;
+  background: #000 !important;
+}
+
+/* Keep YouTube player controls visible and properly positioned */
+body.youtube-zenview-extension .ytp-chrome-bottom {
+  z-index: 10000 !important;
+}
+
+/* Ensure gradient overlays work properly */
+body.youtube-zenview-extension .ytp-gradient-bottom {
+  z-index: 9998 !important;
+}
+
+/* Handle the video info overlay when hovering */
+body.youtube-zenview-extension .ytp-iv-video-content {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Hide any mini-player that might pop up */
+body.youtube-zenview-extension ytd-miniplayer {
+  display: none !important;
+}
+
+/* Ensure proper stacking context */
+body.youtube-zenview-extension ytd-watch-flexy[theater] #player-theater-container,
+body.youtube-zenview-extension ytd-watch-flexy #player-theater-container {
+  max-height: none !important;
+  height: 100vh !important;
+}
+
+/* Handle full-bleed layout */
+body.youtube-zenview-extension ytd-watch-flexy[full-bleed-player] #full-bleed-container {
+  max-height: none !important;
+  height: 100vh !important;
+}

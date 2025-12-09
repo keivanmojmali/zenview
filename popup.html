@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      width: 200px;
+      padding: 20px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: 14px;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    
+    .title {
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 5px;
+    }
+    
+    .status {
+      font-size: 12px;
+      color: #666;
+    }
+    
+    .toggle-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 15px;
+    }
+    
+    .toggle-label {
+      font-weight: 500;
+    }
+    
+    .toggle-switch {
+      position: relative;
+      width: 44px;
+      height: 24px;
+      background-color: #ccc;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    
+    .toggle-switch.active {
+      background-color: #4285f4;
+    }
+    
+    .toggle-slider {
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 20px;
+      height: 20px;
+      background-color: white;
+      border-radius: 50%;
+      transition: transform 0.3s;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+    
+    .toggle-switch.active .toggle-slider {
+      transform: translateX(20px);
+    }
+    
+    .shortcut-info {
+      background: #f5f5f5;
+      padding: 10px;
+      border-radius: 4px;
+      font-size: 12px;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    
+    .settings-link {
+      text-align: center;
+    }
+    
+    .settings-btn {
+      background: none;
+      border: none;
+      color: #4285f4;
+      cursor: pointer;
+      font-size: 12px;
+      text-decoration: underline;
+    }
+    
+    .not-youtube {
+      color: #999;
+      text-align: center;
+      font-size: 12px;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="title">ZenView</div>
+    <div class="status" id="status">Checking...</div>
+  </div>
+  
+  <div id="youtube-content">
+    <div class="toggle-container">
+      <span class="toggle-label">ZenView Mode</span>
+      <div class="toggle-switch" id="toggle">
+        <div class="toggle-slider"></div>
+      </div>
+    </div>
+    
+    <div class="shortcut-info" id="shortcut-info">
+      Press <strong>Ctrl+Shift+F</strong> to toggle
+    </div>
+    
+    <div class="settings-link">
+      <button class="settings-btn" id="settings-btn">Change Shortcut</button>
+    </div>
+  </div>
+  
+  <div id="not-youtube" class="not-youtube" style="display: none;">
+    ZenView only works on YouTube
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
