@@ -1,6 +1,6 @@
 # ZenView
 
-Hide YouTube distractions with customizable keyboard shortcuts for focused viewing.
+A Chrome extension that hides YouTube distractions with customizable keyboard shortcuts for focused viewing
 
 # Download
 
